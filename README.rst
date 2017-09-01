@@ -1,21 +1,37 @@
 Requisiti hardware:
+
 -Raspberry (Pi 2 o superiore)
+
 -Memoria (non testato su 4GB, consigliato 8GB+)
+
 -Speaker
+
 -Microfono (Necessariamente USB perchè aux in input non lo elabora)
+
 -Cavo Jack (Possibile utilizzare Bluetooth ma non testato)
+
 Extra utilizzati:
+
 -Sonoff con firmware ESP Easy
+
 -Powerbank per alimentazione Raspberry
+
 -Lampada o altro da utilizzare con Sonoff
+
 -ESP8266
+
 -Sensori di temperatura e umidità
 
 Requisiti software:
+
 -Raspbian o altre distribuzioni unix (non testate)
+
 -Python (dovrebbe essere già installato)
+
 -Account gratuito Google Cloud Platform
+
 -Account gratuito Amazon Web Services
+
 -Spotify Premium (Anche prova gratuita di x giorni)
 
 $ sudo apt-get update
@@ -90,5 +106,7 @@ $ aws configure
 -default output: text
 
 sudo apt-get install libatlas-base-dev
+
 sudo apt-get install swig3.0 python-pyaudio python3-pyaudio sox
-sudo apt-get install vlc 
+
+sudo apt-get install mplayer
