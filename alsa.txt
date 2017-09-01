@@ -1,0 +1,37 @@
+Audio
+
+
+
+I was able to resolve the following errors below:
+
+$ ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.hdmi
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.modem
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+ALSA lib pcm.c:2239:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.phoneline
+from /usr/share/alsa/alsa.conf, remove:
+
+pcm.rear cards.pcm.rear
+pcm.center_lfe cards.pcm.center_lfe
+pcm.side cards.pcm.side
+pcm.hdmi cards.pcm.hdmi
+pcm.modem cards.pcm.modem
+pcm.phoneline cards.pcm.phoneline
+X11 proxy: Unsupported authorisation protocol
+xcb_connection_has_error() returned true
+copy the .Xauthority file from my own profile /home directory to /root.
+
+ALSA lib pulse.c:243:(pulse_connect) PulseAudio: Unable to connect: Connection refused
+/usr/share/alsa/alsa.conf.d/ remove pulseaudio files. Check home directory for .asoundrc and remove pulseaudio from there if needed.
+
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+jack_control start
+After making those changes, I no longer get the errors, just:
+
+Listening... Press Ctrl+C to exit
