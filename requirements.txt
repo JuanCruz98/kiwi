@@ -1,12 +1,22 @@
 grpcio==1.1.0
+
 proto-google-cloud-speech-v1beta1==0.15.1
+
 six==1.10.0
+
 requests==2.13.0
+
 google-auth==0.8.0
+
 python-pyaudio
-pip install httplib2
+
+httplib2
+
 google-api-python-client
-google-auth
+
 boto3
+
 proto-google-cloud-speech-v1beta1
+
 python-mpd2
+google-cloud-translate
