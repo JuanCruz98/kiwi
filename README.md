@@ -1,16 +1,14 @@
 # Kiwi
 
- <p align="center">
-    Il tuo assistente personale.
- </p>
+Il tuo assistente personale.
  
  ## Requisiti hardware:
 
--Raspberry (Pi 2 o superiore)
--Memoria (non testato su 4GB, consigliato 8GB+)
--Speaker
--Microfono (Necessariamente USB perchè aux in input non lo elabora)
--Cavo Jack (Possibile utilizzare Bluetooth ma non testato)
+ -Raspberry (Pi 2 o superiore)
+ -Memoria (non testato su 4GB, consigliato 8GB+)
+ -Speaker
+ -Microfono (Necessariamente USB perchè aux in input non lo elabora)
+ -Cavo Jack (Possibile utilizzare Bluetooth ma non testato)
 
  ## Extra utilizzati:
  
