@@ -89,9 +89,7 @@ e generare chiave da aggiungere al file di configurazione
 
  ### Amazon Web Services:
 ```
-
-$ sudo pip install awscli
-```
+$ sudo pip install awscli```
 
 -andare su https://console.aws.amazon.com/iam/home?#/home
 -premere nel menu a sinistra "Users"
