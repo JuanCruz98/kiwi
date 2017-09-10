@@ -1,38 +1,33 @@
-Requisiti hardware:
+<h3 align="center">Kiwi</h3>
+
+ <p align="center">
+    Il tuo assistente personale.
+ </p>
+ 
+ ## Requisiti hardware:
 
 -Raspberry (Pi 2 o superiore)
-
 -Memoria (non testato su 4GB, consigliato 8GB+)
-
 -Speaker
-
 -Microfono (Necessariamente USB perchè aux in input non lo elabora)
-
 -Cavo Jack (Possibile utilizzare Bluetooth ma non testato)
 
-Extra utilizzati:
-
+ ## Extra utilizzati:
+ 
 -Sonoff con firmware ESP Easy
-
 -Powerbank per alimentazione Raspberry
-
 -Lampada o altro da utilizzare con Sonoff
-
 -ESP8266
-
 -Sensori di temperatura e umidità
 
-Requisiti software:
+ ## Requisiti software:
 
 -Raspbian o altre distribuzioni unix (non testate)
-
 -Python (dovrebbe essere già installato)
-
 -Account gratuito Google Cloud Platform
-
 -Account gratuito Amazon Web Services
-
 -Spotify Premium (Anche prova gratuita di x giorni)
+
 
 $ sudo apt-get update
 $ sudo apt-get install build-essential python-dev python-pip
