@@ -4,11 +4,11 @@ Il tuo assistente personale.
  
  ## Requisiti hardware:
 
- -Raspberry (Pi 2 o superiore)
- -Memoria (non testato su 4GB, consigliato 8GB+)
- -Speaker
- -Microfono (Necessariamente USB perchè aux in input non lo elabora)
- -Cavo Jack (Possibile utilizzare Bluetooth ma non testato)
+* Raspberry (Pi 2 o superiore)
+* Memoria (non testato su 4GB, consigliato 8GB+)
+* Speaker
+* Microfono (Necessariamente USB perchè aux in input non lo elabora)
+* Cavo Jack (Possibile utilizzare Bluetooth ma non testato)
 
  ## Extra utilizzati:
  
@@ -20,17 +20,21 @@ Il tuo assistente personale.
 
  ## Requisiti software:
 
--Raspbian o altre distribuzioni unix (non testate)
--Python (dovrebbe essere già installato)
--Account gratuito Google Cloud Platform
--Account gratuito Amazon Web Services
--Spotify Premium (Anche prova gratuita di x giorni)
+* Raspbian o altre distribuzioni unix (non testate)
+* Python (dovrebbe essere già installato)
+* Account gratuito Google Cloud Platform
+* Account gratuito Amazon Web Services
+* Spotify Premium (Anche prova gratuita di x giorni)
 
+ ## Configurazioni:
+
+```
 
 $ sudo apt-get update
 $ sudo apt-get install build-essential python-dev python-pip
 $ sudo pip install psutil
 
+```
 Google Cloud SDK:
 
 $ export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
