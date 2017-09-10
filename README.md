@@ -61,16 +61,21 @@ $ sudo apt-get update
 $ sudo apt-get install mopidy
 $ sudo apt-get install mopidy-spotify
 $ mopidy per far partire il server
+```
 
 file di configurazione: ~/.config/mopidy/mopidy.conf
+```
 
 $ sudo dpkg-reconfigure mopidy per far partire il server come servizio (x avvio automatico al boot)
+```
+
 [$ sudo service mopidy status per vedere lo stato]
 [$ sudo service mopidy start per farlo partire]
 [$ sudo service mopidy stop per fermarlo]
 [$ sudo service mopidy restart per riavviarlo]
 
 file configurazione del servizio /etc/mopidy/mopidy.conf
+```
 
 $ sudo cp ~/.config/mopidy/mopidy.conf /etc/mopidy/
 ```
@@ -82,9 +87,11 @@ andare su
 https://www.mopidy.com/authenticate/#spotify
 e generare chiave da aggiungere al file di configurazione
 
-Amazon Web Services:
+ ### Amazon Web Services:
+```
 
 $ sudo pip install awscli
+```
 
 -andare su https://console.aws.amazon.com/iam/home?#/home
 -premere nel menu a sinistra "Users"
@@ -96,14 +103,18 @@ $ sudo pip install awscli
 -Fare Next fino all'ultimo step e memorizzare le keys (quella secret sarà possibile visualizzarla solo una volta, ma è possibile ricrearla)
 
 Guida creazione utente: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
+```
 
 $ aws configure 
+```
+
 -aggiungere le keys precedentemente salvate
 -default region name: eu-west-1
 -default output: text
+```
 
 sudo apt-get install libatlas-base-dev
-
 sudo apt-get install swig3.0 python-pyaudio python3-pyaudio sox
-
 sudo apt-get install mplayer
+```
+
