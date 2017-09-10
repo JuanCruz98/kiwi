@@ -45,8 +45,8 @@ $ sudo pip install google-cloud
 $ sudo pip install --upgrade protobuf
 $ gcloud init
 ```
-premi [6] Create a new project
-chiamalo come vuoi
+* Premi [6] Create a new project
+* Chiamalo come vuoi
 ```
 $ gcloud beta auth login
 $ sudo pip install -r requirements.txt
@@ -63,7 +63,7 @@ $ sudo apt-get install mopidy-spotify
 $ mopidy per far partire il server
 ```
 
-file di configurazione: ~/.config/mopidy/mopidy.conf
+* File di configurazione: ~/.config/mopidy/mopidy.conf
 ```
 
 $ sudo dpkg-reconfigure mopidy per far partire il server come servizio (x avvio automatico al boot)
@@ -74,18 +74,16 @@ $ sudo dpkg-reconfigure mopidy per far partire il server come servizio (x avvio 
 [$ sudo service mopidy stop per fermarlo]
 [$ sudo service mopidy restart per riavviarlo]
 
-file configurazione del servizio /etc/mopidy/mopidy.conf
+* File configurazione del servizio /etc/mopidy/mopidy.conf
 ```
 
 $ sudo cp ~/.config/mopidy/mopidy.conf /etc/mopidy/
 ```
 
-decommentare la sezione [file] e aggiungere in media_dirs = /home/pi/kiwi/musica o qualsiasi dir contentente musica per poterla riprodurre dal server
-decommentare hostname nella sezione [mpd] e metterci indirizzo raspberry per poter accedere dall' esterno (esiste un client android chiamato MPDroid molto utile per verificare il funzionamento)
+*Decommentare la sezione [file] e aggiungere in media_dirs = /home/pi/kiwi/musica o qualsiasi dir contentente musica per poterla riprodurre dal server
+*Decommentare hostname nella sezione [mpd] e metterci indirizzo raspberry per poter accedere dall' esterno (esiste un client android chiamato MPDroid molto utile per verificare il funzionamento)
 
-andare su 
-https://www.mopidy.com/authenticate/#spotify
-e generare chiave da aggiungere al file di configurazione
+*Andare su https://www.mopidy.com/authenticate/#spotify e generare chiave da aggiungere al file di configurazione
 
  ### Amazon Web Services:
 ```
@@ -93,24 +91,24 @@ e generare chiave da aggiungere al file di configurazione
 $ sudo pip install awscli
 ```
 
-andare su https://console.aws.amazon.com/iam/home?#/home
-premere nel menu a sinistra "Users"
-premere il pulsante "Add user"
-dare un nome (es. admin)
-spuntare "Programmatic access" su "Access type"
-premere Next
-Crea un gruppo e seleziona AdministratorAccess dall'elenco delle policy
-Fare Next fino all'ultimo step e memorizzare le keys (quella secret sarà possibile visualizzarla solo una volta, ma è possibile ricrearla)
+* Andare su https://console.aws.amazon.com/iam/home?#/home
+* Premere nel menu a sinistra "Users"
+* Premere il pulsante "Add user"
+* Dare un nome (es. admin)
+* Spuntare "Programmatic access" su "Access type"
+* Premere Next
+* Crea un gruppo e seleziona AdministratorAccess dall'elenco delle policy
+* Fare Next fino all'ultimo step e memorizzare le keys (quella secret sarà possibile visualizzarla solo una volta, ma è possibile ricrearla)
 
-Guida creazione utente: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
+* Guida creazione utente: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
 ```
 
 $ aws configure 
 ```
 
--aggiungere le keys precedentemente salvate
--default region name: eu-west-1
--default output: text
+* aggiungere le keys precedentemente salvate
+* default region name: eu-west-1
+* default output: text
 ```
 
 sudo apt-get install libatlas-base-dev
