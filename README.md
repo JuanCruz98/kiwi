@@ -44,8 +44,10 @@ $ sudo apt-get install google-cloud-sdk-app-engine-python
 $ sudo pip install google-cloud
 $ sudo pip install --upgrade protobuf
 $ gcloud init
--premi [6] Create a new project
--chiamalo come vuoi
+```
+premi [6] Create a new project
+chiamalo come vuoi
+```
 $ gcloud beta auth login
 $ sudo pip install -r requirements.txt
 ```
@@ -91,14 +93,14 @@ e generare chiave da aggiungere al file di configurazione
 $ sudo pip install awscli
 ```
 
--andare su https://console.aws.amazon.com/iam/home?#/home
--premere nel menu a sinistra "Users"
--premere il pulsante "Add user"
--dare un nome (es. admin)
--spuntare "Programmatic access" su "Access type"
--premere Next
--Crea un gruppo e seleziona AdministratorAccess dall'elenco delle policy
--Fare Next fino all'ultimo step e memorizzare le keys (quella secret sarà possibile visualizzarla solo una volta, ma è possibile ricrearla)
+andare su https://console.aws.amazon.com/iam/home?#/home
+premere nel menu a sinistra "Users"
+premere il pulsante "Add user"
+dare un nome (es. admin)
+spuntare "Programmatic access" su "Access type"
+premere Next
+Crea un gruppo e seleziona AdministratorAccess dall'elenco delle policy
+Fare Next fino all'ultimo step e memorizzare le keys (quella secret sarà possibile visualizzarla solo una volta, ma è possibile ricrearla)
 
 Guida creazione utente: http://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
 ```
