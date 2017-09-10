@@ -29,11 +29,9 @@ Il tuo assistente personale.
  ## Configurazioni:
 
 ```
-
+$ git clone https://github.com/JuanCruz98/kiwi.git (in una qualsiasi directory su Rasberry)
 $ sudo apt-get update
 $ sudo apt-get install build-essential python-dev python-pip
-$ sudo pip install psutil
-
 ```
  ### Google Cloud SDK:
 ```
@@ -89,7 +87,9 @@ e generare chiave da aggiungere al file di configurazione
 
  ### Amazon Web Services:
 ```
- $ sudo pip install awscli ```
+
+$ sudo pip install awscli
+```
 
 -andare su https://console.aws.amazon.com/iam/home?#/home
 -premere nel menu a sinistra "Users"

@@ -16,7 +16,7 @@ google-api-python-client
 
 boto3
 
-proto-google-cloud-speech-v1beta1
-
 python-mpd2
 google-cloud-translate
+psutil
+
