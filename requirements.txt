@@ -7,9 +7,6 @@ six==1.10.0
 requests==2.13.0
 
 google-auth==0.8.0
-
-python-pyaudio
-
 httplib2
 
 google-api-python-client

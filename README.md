@@ -80,10 +80,10 @@ $ sudo dpkg-reconfigure mopidy per far partire il server come servizio (x avvio 
 $ sudo cp ~/.config/mopidy/mopidy.conf /etc/mopidy/
 ```
 
-*Decommentare la sezione [file] e aggiungere in media_dirs = /home/pi/kiwi/musica o qualsiasi dir contentente musica per poterla riprodurre dal server
-*Decommentare hostname nella sezione [mpd] e metterci indirizzo raspberry per poter accedere dall' esterno (esiste un client android chiamato MPDroid molto utile per verificare il funzionamento)
+* Decommentare la sezione [file] e aggiungere in media_dirs = /home/pi/kiwi/musica o qualsiasi dir contentente musica per poterla riprodurre dal server
+* Decommentare hostname nella sezione [mpd] e metterci indirizzo raspberry per poter accedere dall' esterno (esiste un client android chiamato MPDroid molto utile per verificare il funzionamento)
 
-*Andare su https://www.mopidy.com/authenticate/#spotify e generare chiave da aggiungere al file di configurazione
+* Andare su https://www.mopidy.com/authenticate/#spotify e generare chiave da aggiungere al file di configurazione
 
  ### Amazon Web Services:
 ```
@@ -111,8 +111,10 @@ $ aws configure
 * default output: text
 ```
 
-sudo apt-get install libatlas-base-dev
-sudo apt-get install swig3.0 python-pyaudio python3-pyaudio sox
-sudo apt-get install mplayer
+$ sudo apt-get install libatlas-base-dev
+$ sudo apt-get install swig3.0 python-pyaudio python3-pyaudio sox
+$ sudo apt-get install mplayer
+$ sudo apt-get install python-pyaudio
+
 ```
 
