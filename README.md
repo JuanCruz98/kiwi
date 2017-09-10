@@ -12,11 +12,11 @@ Il tuo assistente personale.
 
  ## Extra utilizzati:
  
-*Sonoff con firmware ESP Easy
-*Powerbank per alimentazione Raspberry
-*Lampada o altro da utilizzare con Sonoff
-*ESP8266
-*Sensori di temperatura e umidità
+* Sonoff con firmware ESP Easy
+* Powerbank per alimentazione Raspberry
+* Lampada o altro da utilizzare con Sonoff
+* ESP8266
+* Sensori di temperatura e umidità
 
  ## Requisiti software:
 
