@@ -1,4 +1,4 @@
-<h3 align="center">Kiwi</h3>
+# Kiwi
 
  <p align="center">
     Il tuo assistente personale.
