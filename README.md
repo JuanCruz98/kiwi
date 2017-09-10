@@ -69,10 +69,10 @@ $ mopidy per far partire il server
 $ sudo dpkg-reconfigure mopidy per far partire il server come servizio (x avvio automatico al boot)
 ```
 
-[$ sudo service mopidy status per vedere lo stato]
-[$ sudo service mopidy start per farlo partire]
-[$ sudo service mopidy stop per fermarlo]
-[$ sudo service mopidy restart per riavviarlo]
+* [$ sudo service mopidy status per vedere lo stato]
+* [$ sudo service mopidy start per farlo partire]
+* [$ sudo service mopidy stop per fermarlo]
+* [$ sudo service mopidy restart per riavviarlo]
 
 * File configurazione del servizio /etc/mopidy/mopidy.conf
 ```
