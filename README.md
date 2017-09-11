@@ -80,8 +80,20 @@ $ sudo dpkg-reconfigure mopidy per far partire il server come servizio (x avvio 
 $ sudo cp ~/.config/mopidy/mopidy.conf /etc/mopidy/
 ```
 
+* (Se alcune sezioni non fossero presenti, all'interno della cartella mopidy lascio le mie configurazioni.)
+```
+
+$ sudo nano /etc/mopidy/mopidy.conf
+```
+
 * Decommentare la sezione [file] e aggiungere in media_dirs = /home/pi/kiwi/musica o qualsiasi dir contentente musica per poterla riprodurre dal server
 * Decommentare hostname nella sezione [mpd] e metterci indirizzo raspberry per poter accedere dall' esterno (esiste un client android chiamato MPDroid molto utile per verificare il funzionamento)
+* Decommentare la sezione [local] e fare una scansione:
+```
+
+$ sudo mopidy local scan && sudo mopidyctl local scan
+```
+
 
 * Andare su https://www.mopidy.com/authenticate/#spotify e generare chiave da aggiungere al file di configurazione
 
@@ -118,3 +130,4 @@ $ sudo apt-get install python-pyaudio
 
 ```
 
+Una volta configurato tutto è possibile modificare i parametri all'interno del file kiwi.py come la variabile "ip" che corrisponde all' IP del server mopidy quindi quello del Raspberry.
