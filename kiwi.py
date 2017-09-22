@@ -24,8 +24,9 @@ import googleEvents
 import google.auth
 import google.auth.transport.grpc
 import google.auth.transport.requests
-from GoogleTranslate import traduci
 
+from yeelight import Bulb
+from GoogleTranslate import traduci
 from calcoli import Operazioni
 from googleEvents import getEvents
 from aws import VoiceSynthesizer
@@ -56,6 +57,7 @@ DETECT_DING = join(TOP_DIR, "resources/ding.wav")
 DETECT_DONG = join(TOP_DIR, "resources/dong.wav")
 ip="192.168.1.81" #IP Raspberry per server musicale
 ipSonoff="192.168.1.69"
+bulb=Bulb("192.168.1.116") #lampada yeelight
 accesa=True
 interrupted=False
 musica=False
@@ -440,7 +442,7 @@ class GoogleSpeech:
                     synthesizer.say('Davvero molto spiritoso, franco.')
                     self.audio_interface.terminate()
                     self.main()
-                                      
+                 
                 
                 if re.search(r'\b(ventilatore|lampada|luce)\b', transcript, re.I):
                     audio_stream.stop_stream()
@@ -515,7 +517,45 @@ class GoogleSpeech:
 
             else:
                 print(transcript + overwrite_chars)
-                if re.search(r'\b(quanto fa)\b', transcript, re.I):
+                
+                if re.search(r'\b(bulbo)\b', transcript, re.I):
+                    audio_stream.stop_stream()
+                    if "spegni" in transcript or "spegnere" in transcript:
+                        try:
+                            bulb.turn_off()
+                        except:
+                            synthesizer.say('Non riesco a comunicare con il bulbo')
+                    elif "accendi" in transcript or "accendere" in transcript:
+                        try:
+                            print ("accesa:"+ transcript)
+                            bulb.turn_on()
+                        except:
+                            synthesizer.say('Non riesco a comunicare con la luce')
+                    elif "rosso" in transcript or "rossa" in transcript:
+                        try:
+                            bulb.turn_on()
+                            bulb.set_rgb(255, 0, 0)
+                        except:
+                            synthesizer.say('Non riesco a comunicare con la luce')  
+                    elif "verde" in transcript:
+                        try:
+                            bulb.turn_on()
+                            bulb.set_rgb(0, 255, 0)
+                        except:
+                            synthesizer.say('Non riesco a comunicare con la luce')  
+                    elif "blu" in transcript:
+                        try:
+                            bulb.turn_on()
+                            bulb.set_rgb(0, 0, 255)
+                        except:
+                            synthesizer.say('Non riesco a comunicare con la luce')          
+                    else:
+                        synthesizer.say("Non ho capito.")
+
+                    self.audio_interface.terminate()
+                    self.main()
+                    
+                elif re.search(r'\b(quanto fa)\b', transcript, re.I):
                     audio_stream.stop_stream()
                     if "meno" in transcript or "-" in transcript: 
                         synthesizer.say(op.sottrazione(transcript))
@@ -557,7 +597,7 @@ class GoogleSpeech:
                         lang= transcript.rsplit("in ",1) #reverse split, prende ultimo in
                         testo=lang[0].split("traduci")
                         lingua=voiceDict[lang[1]]
-			traduzione=traduci(testo[1],languageDict[lang[1]])
+                        traduzione=traduci(testo[1],languageDict[lang[1]])
                         print traduzione
                         synthesizer.say(traduzione,lingua)
                     except Exception,e: 
