@@ -12,9 +12,7 @@ def traduci(text, target):
  #   testo=raw_input("Testo: ")
 	testo=text
         testo=testo.decode('utf-8') 
-        service = build('translate', 'v2',
-      
-        developerKey='AIzaSyApHDP-O5n5iYhU8bsWfFrufdx4Xm2TjXM')
+        service = build('translate', 'v2')
         
     #   fro=raw_input('Lingua di input (se vuoto rilevata automaticamente): ')
     #   to=raw_input('Lingua di output: ')
